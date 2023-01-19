@@ -64,7 +64,7 @@ class _EmailPasswordSignupState extends State<EmailPasswordSignup> {
               ),
             ),
             child: const Text(
-              "Crea una cuenta",
+              "Crear una cuenta",
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
           ),
