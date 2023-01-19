@@ -69,10 +69,16 @@ class _EmailPasswordLoginState extends State<EmailPasswordLogin> {
             ),
           ),
           CustomButton(
+              onTap: () {
+                Navigator.pushNamed(context, EmailPasswordSignup.routeName);
+              },
+              text: 'Crear una cuenta',
+            ),
+          CustomButton(
             onTap: () {
               context.read<FirebaseAuthMethods>().signInWithGoogle(context);
             },
-            text: 'Google Sign In',
+            text: 'Iniciar sesión con Google',
           ),
         ],
       ),

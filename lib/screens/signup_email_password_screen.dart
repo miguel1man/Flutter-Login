@@ -1,5 +1,7 @@
 import 'package:firebase_auth_demo/services/firebase_auth_methods.dart';
 import 'package:firebase_auth_demo/widgets/custom_textfield.dart';
+import 'package:firebase_auth_demo/widgets/custom_button.dart';
+import 'package:firebase_auth_demo/screens/login_email_password_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -30,7 +32,7 @@ class _EmailPasswordSignupState extends State<EmailPasswordSignup> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text(
-            "Sign Up",
+            "Crea un cuenta",
             style: TextStyle(fontSize: 30),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.08),
@@ -38,7 +40,7 @@ class _EmailPasswordSignupState extends State<EmailPasswordSignup> {
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: CustomTextField(
               controller: emailController,
-              hintText: 'Enter your email',
+              hintText: 'Correo',
             ),
           ),
           const SizedBox(height: 20),
@@ -46,7 +48,7 @@ class _EmailPasswordSignupState extends State<EmailPasswordSignup> {
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: CustomTextField(
               controller: passwordController,
-              hintText: 'Enter your password',
+              hintText: 'Contraseña',
             ),
           ),
           const SizedBox(height: 40),
@@ -62,9 +64,15 @@ class _EmailPasswordSignupState extends State<EmailPasswordSignup> {
               ),
             ),
             child: const Text(
-              "Sign Up",
+              "Crea una cuenta",
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
+          ),
+          CustomButton(
+            onTap: () {
+              Navigator.pushNamed(context, EmailPasswordLogin.routeName);
+            },
+            text: 'Regresar al inicio de sesión',
           ),
         ],
       ),
