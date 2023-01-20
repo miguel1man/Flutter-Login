@@ -52,7 +52,9 @@ class _EmailPasswordLoginState extends State<EmailPasswordLogin> {
             ),
           ),
           const SizedBox(height: 40),
-          ElevatedButton(
+          Container(
+          constraints: BoxConstraints(maxWidth: 240),
+          child: ElevatedButton(
             onPressed: loginUser,
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.blue),
@@ -60,13 +62,14 @@ class _EmailPasswordLoginState extends State<EmailPasswordLogin> {
                 const TextStyle(color: Colors.white),
               ),
               minimumSize: MaterialStateProperty.all(
-                Size(MediaQuery.of(context).size.width / 2.5, 50),
+                Size(MediaQuery.of(context).size.width / 2, 40),
               ),
             ),
             child: const Text(
               "Ingresar",
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
+          ),
           ),
           CustomButton(
               onTap: () {
