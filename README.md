@@ -26,7 +26,7 @@ CustomButton(
 ## Estilo de botones
 El botón `lib/widgets/custom_button.dart` tiene por defecto un ancho que ocupa toda la pantalla.
 
-```
+```dart
 style: ElevatedButton.styleFrom(
     minimumSize: const Size(double.infinity, 40),
 )
@@ -34,7 +34,7 @@ style: ElevatedButton.styleFrom(
 
 Así que lo cambié al mismo ancho del botón anterior para mantener un estilo consistente. Además cambié el color de fondo y un ancho de borde.
 
-```
+```dart
 style: ElevatedButton.styleFrom(
     shape: RoundedRectangleBorder(
         side: BorderSide(color: Colors.blue, width: 2),
@@ -61,4 +61,15 @@ y
 - user_two@miguelhuaman.com
 - 987654
 
+## AppBar
 
+En el archivo `lib/screens/home_screen.dart` se agregó el AppBar con el correo del usuario:
+
+```dart
+return Scaffold(
+    appBar: AppBar(
+        title: Text(user.email!),
+        ),
+    body: Column(
+        //Continuar con el código
+```

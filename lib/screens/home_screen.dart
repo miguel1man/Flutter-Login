@@ -11,6 +11,9 @@ class HomeScreen extends StatelessWidget {
     final user = context.read<FirebaseAuthMethods>().user;
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text(user.email!),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
