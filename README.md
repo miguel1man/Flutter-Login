@@ -1,6 +1,6 @@
 ## ¿Cómo probar la app?
 - `flutter pub get` para instalar las librerías.
-- `flutter run -d chrome` para iniciar ver el proyecto en el navegador.
+- `flutter run -d chrome` para iniciar el proyecto en el navegador.
 
 ## Inicio de sesión con Firebase
 La funcionalidad más compleja es utilizar la autenticación de Google para iniciar sesión con un simple clic. Así que comencé clonando un repo que ya tenía implementada esa funcionalidad: https://github.com/RivaanRanawat/flutter-firebase-auth
